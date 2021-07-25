@@ -1,0 +1,21 @@
+#+title: Nix
+
+Nix is a tool that takes a unique approach to package management and system configuration.
+
+There are few features that Nix bring to the table:
+
+* Reproducible
+
+Nix builds packages in insolation from each other. ~If a package works on one machine, it will also work on another~.
+
+* Declarative
+
+Nix makes it ~trivial to share development and build environments~.
+
+* Reliable
+
+Nix ensures that installing or upgrading one package ~cannot break other packages~. It allows you to ~roll back to previous versions~.
+
+* Glossary
+
+See also about

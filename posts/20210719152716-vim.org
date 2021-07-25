@@ -1,0 +1,3 @@
+#+title: Vim
+
+[[https://www.vim.org/][Vim]] is a highly configurate text editor built to make creating and changing any kind of text very efficient.

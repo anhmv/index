@@ -1,0 +1,40 @@
+#+title: Learning Rate
+#+roam_alias: "learning rate"
+
+* What is the learning rate?
+
+#+BEGIN_QUOTE
+... learning rate, a positive scalar determining the size of the step.
+#+END_QUOTE
+
+Deep learning neural networks are trained using the [[file:20210725141547-stochastic_gradient_descent.org][stochastic gradient descent]] algorithm.
+
+The amount that the weights are updated during training is referred to as the step size of the "learning rate."
+
+Specifically, the learning rate is configurable hyperparameter used in the training of neural networks that has a small positive value, often in the range between [0.0, 1.0].
+
+#+BEGIN_QUOTE
+~0.1~ is a traditionally common default value for the learning rate.
+#+END_QUOTE
+
+
+* What is the effect of learning rate?
+
+A [[file:20210725142112-neural_network.org][neural network]] learns or approximates a function to best map inputs to outputs from examples in the training dataset.
+
+The [[file:20210725141410-learning_rate.org][learning rate]] hyperparameter controls the rate or speed at which the model learns. Specifically, it controls the amount of apportioned error that the weights of the model are updated with each time they are updated, such as at the end of each batch of trianing examples.
+
+Given a perfectly configured [[file:20210725141410-learning_rate.org][learning rate]], the model will learn to best approximate the function given available resources in a given number of training epochs.
+
+A large [[file:20210725141410-learning_rate.org][learning rate]] allows the model to learn faster, at the cost of arriving on a sub-optimal final set of weights. At extremes, a learning rate that is too large will result in weight updates that will be too large and the performance of the model will oscillate over training epochs. Oscillating performance is said to be caused by weights that diverge.
+
+A small [[file:20210725141410-learning_rate.org][learning rate]] may allows the model to learn a more optimal or even globally optimal set of weights but may take significantly longer to train. A learning rate that is too small may never converge or may get stuck on a suboptimal solution.
+
+#+BEGIN_QUOTE
+- When the learning rate is too large, gradient descent can inadvertently increase rather than decrease the training error.
+- When the learning rate is too small, training is not only slower, but may become permanently stuck with a high training error.
+#+END_QUOTE
+
+* Conclusion
+
+We should not use a [[file:20210725141410-learning_rate.org][learning rate]] that is too large or too small. Nevertheless, we must configurate the model in such a way that on avarage a ~good enough~ set of weights is found to approximate the mapping problem as represented by the training dataset.

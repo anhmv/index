@@ -1,0 +1,6 @@
+#+title: Tensorflow
+#+roam_key: https://tensorflow.com
+
+TensorFlow is an end-to-end open source platform for machine learning. It has a comprehensive, flexible ecosystem of tools, libraries and community resource that lets researchers push the state-of-the-art in Machine Learning, and developers easily build and deploy ML powered applications.
+
+[[file:20210724131332-tensorflow_pineline_config.org][Tensorflow Pineline Config]]

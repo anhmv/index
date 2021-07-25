@@ -1,0 +1,5 @@
+#+title: Deft
+
+Deft is an [[id:710bdf87-74fa-4554-b275-6afd85e56820][Emacs]] mode for quickly browsing, filtering, and editing directories of plain text notes.
+Press =SPC n d= to trigger the Deft UI, and start searching through your note. Also =Ctrl c= used to
+open the Deft UI.

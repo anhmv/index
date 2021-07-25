@@ -1,0 +1,138 @@
+#+title: Nix Glossary
+
+
+* derivation
+
+#+BEGIN_QUOTE
+- A description of a build action.
+- The result of a derivation is a ~store object~.
+- Derivations are typically specified in [[file:20210724194424-nix.org][Nix]] expressions using the ~derivation~ primitive.
+- These are translated into low-level store derivations. (implicitly by ~nix-env~, and ~nix-build~, or explicitly by ~nix-instantiate~)
+#+END_QUOTE
+
+
+* store
+
+#+BEGIN_QUOTE
+The location in the file system where store objects live. Typically ~/nix/store~.
+#+END_QUOTE
+
+I would think =store= would mean *the collection of things* not *the location of the collection of things".
+
+* store path
+
+#+BEGIN_QUOTE
+The location in the file system of a store object, i.e., an immediate child of the Nix store directory.
+#+END_QUOTE
+
+That's funny, we do have the ~store~ above is the location of the collections of things, and ~store path~ means the *path in the store, not path to the store*. Simple enough.
+
+
+* store object
+
+#+BEGIN_QUOTE
+A file that is an immediate child of the Nix store directory. These can be regular files, but also entire directory trees. Store objects can be sources (objects copied from outside the store), direvation outputs (objects produced by running a build action), or ~derivations~ (files describling a build action).
+#+END_QUOTE
+
+Ok, the store object can be anything, derivations can live in the store, build artifacts can live in the store, and plain files also can live in the store.
+
+
+* substitute
+
+#+BEGIN_QUOTE
+A substitute is a command invocation stored in the Nix database that describes how to build a store object, by passing the normal build mechanism (i.e., derivation). Typically, the substitute builds the store object by downloading a pre-build version of the store object from some server.
+#+END_QUOTE
+
+This is the first occurrence of the term ~Nix database~. I don't know what that means. I assume it is separate from the ~store~, but it is not defined anywhere, and descriptions of Nix are usually about "content addressable store" and not "content addressable store plus a database."
+
+Also, pre-build versions of the store object can be placed in any servers.
+
+
+* purity
+
+#+BEGIN_QUOTE
+The assumption that equal Nix derivations when run always produce the same output. This cannot be guaranteed in general. (e.g., a builder can rely on external inputs such as the network or the system time) the the Nix model assumes it.
+#+END_QUOTE
+
+Ok, understood.
+
+
+* Nix expression
+
+#+BEGIN_QUOTE
+A high-level description of software packages and compositions thereof. Deploying software using Nix entails writing expressions for your packages. Nix expressions are translated to derivations that are stored in the Nix store. These derivations can then be built.
+#+END_QUOTE
+
+The questions here are what are software packages and what are compositions?. I understand that we have to write scripts to deploy my packages, the syntax must be followed the Nix expressions. So, the software packages and compositions are something I can get from the internet via Git, or any servers, software packages can be any formats or it is a pre-build derivation, a Nix package?.
+
+*Deploying software using Nix entails ...*, does that mean Nix uses to deploy softwares instead of writing softwares.
+
+
+* reference
+
+#+BEGIN_QUOTE
+- A store path ~P~ is said to have a reference to a store path ~Q~ if the store object at ~P~ contains the path ~Q~ somewhere. The /references/ of a store path are the set of store paths to which it has a reference.
+- A derivation can reference other deirvations and sources (but not output paths), whereas an output path only references other output paths.
+#+END_QUOTE
+
+* reachable
+
+#+BEGIN_QUOTE
+A store path ~Q~ is reachable from another store path ~P~ is ~Q~ is in the closure of the references relation.
+#+END_QUOTE
+
+* closure
+
+#+BEGIN_QUOTE
+The closure of a store path is the set of store paths that are directly or indirectly "reachable" from that store path; that is, it's the closure of the path under the references relation. For a package, the closure of its derivation is equivalent to the build-time dependencies, when the closure of its output path is equivalent to its runtime dependencies. For correct deployment is is necessary to deploy whole closures, since otherwise at runtime files could be missing. The command ~nix-store -qR~ prints out closures of store paths.
+
+As an example, if the store object at path ~P~ contains a reference to path ~Q~, then ~Q~ is in the closure of ~P~. Further, if ~Q~ references ~R~ then ~R~ is also in the closure of ~P~.
+
+The closure of its derivation is equivalent to the build-time dependencies, while the closure of its output path is equivalent to its runtime dependencies.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+The command ~nix-store -qR~ prints out closures of store paths.
+#+END_QUOTE
+
+* output path
+
+#+BEGIN_QUOTE
+A store path produced by a derivation.
+#+END_QUOTE
+
+* deriver
+
+#+BEGIN_QUOTE
+The deriver of an output path is the store derivation that built it.
+#+END_QUOTE
+
+Okay, so that is "store derivation" not "derivation". Still unclear on that distinction.
+
+* validity
+
+#+BEGIN_QUOTE
+A store path is considered /valid/ if it exists in the file system, is listed in the Nix database as being valid, and if all paths in its closure are also valid.
+#+END_QUOTE
+
+Here I see the term ~Nix database~ again. This is not a helpful definition: it sort of reads as "a package is valid if it is marked valid", so I think something has a magic to mark a package is valid or not, and the Nix database will store a collection of packages and its attributes.
+
+* user environment
+
+#+BEGIN_QUOTE
+An automatically generated store object that consists of a set of symlinks to ~active~ applications, i.e., other store paths. These are generated automatically by ~nix-env~.
+#+END_QUOTE
+
+* profile
+
+#+BEGIN_QUOTE
+A symlink to the current user environment of a user, e.g., ~/nix/var/nix/profiles/default~
+#+END_QUOTE
+
+Ok, understood.
+
+* NAR
+
+#+BEGIN_QUOTE
+A /Nix ARchive/. This is a serialization of a path in the Nix store. It can contain regular files, directories and symbolic links. NARs are generated and unpackaged using ~nix-store --dump~ and ~nix-store --restore~.
+#+END_QUOTE

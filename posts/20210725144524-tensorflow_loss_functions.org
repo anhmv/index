@@ -1,0 +1,15 @@
+#+title: Tensorflow Loss Functions
+
+* Classification loss
+:PROPERTIES:
+:ID: classification_loss
+:END:
+
+Loss for the classification of detected objects into various classes: cat, dog, pig, elephant, etc.
+
+* Localization loss
+:PROPERTIES:
+:ID: localization_loss
+:END:
+
+Loss of the bounding box regressor.

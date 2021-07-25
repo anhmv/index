@@ -1,0 +1,28 @@
+#+title: 2021-07-21
+
+* TODO Setup a phoenix server on a Rasberry PI to serve API
+SCHEDULED: <2021-07-21 Wed>
+
+** DONE Set up a Raspberry PI as the server
+
+- Setup Ubuntu Server on Rasberry PI is now really easy. What I have to do is download
+  the Raspberry Pi Imager, select your OS which you wish to install. Select the SD Card
+  and write to the disk.
+
+* DONE Get familiar to the new merchanism keyboard
+SCHEDULED: <2021-07-21 Wed 9:00-12:00>
+
+My new toy is a Leopold merchanism keyboard, model no. FC650MDS.
+The switch type is silent red, I really love it because of it is really silent
+and I don't need to care about the noise when typing affect to other people.
+
+There are sevaral issues that I have found it after few minutes hand-on.
+
+It hasn't the ` and the ~ buttons on the layout, I have to press ~Shift Esp~ to type ~~~,
+and ~Fn Esp~ to type the ~`~. It costs me another key stroke to type these characters.
+
+* DONE Investigating why new todo items do not showing on the agenda view
+SCHEDULED: <2021-07-21 Wed>
+
+There is a new file created inside the default doom emacs config named `custom.el`
+It override the `org-agenda-files` value by specific an array of agenda file paths.

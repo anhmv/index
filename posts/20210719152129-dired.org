@@ -1,0 +1,52 @@
+#+title: Dired
+
+Dired is a powerufl built-in mode for [[file:tools/emacs/20210719142534-emacs.org][Emacs]], that enables the ability of using Emacs like a file browser.
+
+* How to enter Dired-mode
+
+Use =C-x d= to enter dired-mode, and give the path of a directory to open.
+
+In Doom Emacs we could use =SPC : dired= to enter the dired mode instead.
+
+* Navigate cursor around
+
+The move the cursor around we can use the arrow keys, also if the [[file:20210719152617-evil_mode.org][Evil mode]] is enable, we can use
+~h, j, k, l~ for moving around.
+
+* Useful keybinding
+
+|------------------------------------------+-------|
+| Name                                     | Key   |
+|------------------------------------------+-------|
+| Next sub directory                       | >     |
+| Previous sub directory                   | <     |
+| Move up a level in the directory tree    | ^     |
+| Open a folder/file                       | Enter |
+| Create new file or folder                | +     |
+| Go to the parent folder                  | -     |
+| Change the sorting between name and data | s     |
+| Refresh the view                         | g     |
+| Copy                                     | C     |
+| Move                                     | R     |
+| Delete                                   | D     |
+| Mark files                               | m     |
+| Unmark files                             | u     |
+| Invert mark files                        | * t   |
+| Mark all files                           | * s   |
+| Hide mark files                          | k     |
+| Show the hidden marked files             | g     |
+|------------------------------------------+-------|
+
+
+Also, you can mark files in dired use regular expressions, for examples
+
+|-----------------+---------------------------------------------------------------------------------|
+| Command         | Description                                                                     |
+|-----------------+---------------------------------------------------------------------------------|
+| % m test        | Mark all withs with names containing the string "test"                          |
+| % m ^test       | Mark all files with names starting with the string "test"                       |
+| % m txt$        | Mark all files with names ending with the string "txt"                          |
+| % m ^test.*org$ | Mark all files with names starting with the string "test" and ending with "org" |
+| % m [abc]       | Mark all files with names containing the letters a, b, c                        |
+| % m [6-9]       | Mark all files with names containing the digits 6, 7, 8, 9                      |
+|-----------------+---------------------------------------------------------------------------------|

@@ -1,0 +1,7 @@
+#+title: Tensorflow Pineline Config
+#+roam_key: https://github.com/tensorflow/models/blob/master/research/object_detection/builders/preprocessor_builder_test.py
+
+
+SSD MobileNet Keras
+
+[[file:20210724131024-tensorflow.org][Tensorflow]]

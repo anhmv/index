@@ -1,0 +1,13 @@
+#+title: Nix Questions
+
+
+These questions are noted during learning about [[file:20210725101505-nix_glossary.org][Nix Glossary]].
+
+* TODO What is the difference between a "derivation" and a "store derivation"?
+* TODO How does a derivation turn into a "result" or an "output path"?
+* TODO When does a derivation "produce" something?
+* TODO What is the Nix database, and what is stored there?
+* TODO What does it mean to compose a package?
+* TODO What are the ~nix~ equivalents of ~nix-env~, ~nix-build~, and ~nix-instantiate~?
+* TODO What is the ~nix~ equivalent of ~nix-store -qR~ to print out the closure of a store path?
+* TODO What are the ~nix~ equivalents of ~nix-store --dump~ and ~nix-store --restore~, for working with NARs?

@@ -1,0 +1,13 @@
+#+TITLE: Welcome!
+
+My name is *Mac Van Anh*. I love exploring life, humans, and myself. I create software products for a living.
+
+Here you can explore what's on my mind or what I want to say. Many pages are just notes for myself, they are labeled with 📝. Finished posts are marked with 🖋, and 📖 are reading notes.
+
+#+HTML: <footer>
+#+HTML: <div class="special-block block-small">
+
+This website is built from my [[https://orgmode.org/][org-mode]] notes (managed by [[https://github.com/org-roam/org-roam][org-roam]]). The notes are parsed by [[https://github.com/rasendubi/uniorg][uniorg]] and are exposed as a [[https://nextjs.org/][Next.js]] website.
+
+#+HTML: </div>
+#+HTML: </footer>

@@ -1,0 +1,4 @@
+#+title: Evil mode
+
+Evil mode is an extensible ~vi~ layer for [[file:20210719142534-emacs.org][Emacs]]. It emulates the main features of [[file:../vim/20210719152716-vim.org][Vim]], and provides facilities
+for writing custom extensions.

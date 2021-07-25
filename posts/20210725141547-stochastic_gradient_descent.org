@@ -1,0 +1,3 @@
+#+title: stochastic gradient descent
+
+Stochastic gradient descent is an optimization algorithm that estimates the error gradient for the current state of the model using examples from the training dataset, then updates the weights of the model using the back-propagation of errors algorithm.

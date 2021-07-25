@@ -1,0 +1,13 @@
+#+TITLE: 2021-07-19
+
+* DONE Checkout uniorg
+SCHEDULED: <2021-07-19 Mon 21:00>
+- https://github.com/rasendubi/uniorg
+
+* DONE Checkout git conventional commits
+SCHEDULED: <2021-07-19 Mon 22:00>
+- https://www.conventionalcommits.org/en/v1.0.0/
+
+* DONE Create my own index using [[file:../tools/emacs/20210719141730-org_mode.org][Org Mode]], [[file:../tools/emacs/20210719141705-org_roam.org][Org Roam]] and Uniorg
+
+It's possible to implement an index/blog page using the [[file:../tools/emacs/20210719141730-org_mode.org][Org Mode]],[[file:../tools/emacs/20210719141705-org_roam.org][ Org Roam]], and UniOrg

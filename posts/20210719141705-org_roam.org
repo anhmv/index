@@ -1,0 +1,23 @@
+#+title: Org Roam
+
+Org Roam is a tool for organizing notes in [[file:20210719142534-emacs.org][Emacs]] built on top of [[file:20210719141730-org_mode.org][Org Mode]].
+
+It's a replica of [[file:20210719142909-roam_research.org][Roam Research]], a web based tool that popularized this approach of organizing
+notes not in a hierarchical way, but as set of documents connected with links. Somehow similar
+to how the Web is organized. You write a note, then another and maybe you connected them with
+links if they are related. The key idea of Roam and in Org Roam is that for each note you can
+see on the side other notes that mention or reference the note you care currently viewing. By
+seeing the relations between your notes, you have more context about the information you are
+storing in them. It's very simple, yet powerful. Finalry, contrary to Roam Research, by using
+Emacs, you write notes as plain text. You can store them anywhere, and you are not locked-in
+to a particular vendor.
+
+* Useful commands
+
+  |----------------------+-------------|
+  | Name                 | Command     |
+  |----------------------+-------------|
+  | Capture a new note   | =SPC n r c= |
+  | Add a link to a note | =SPC n r i= |
+  | See the backlinks    | =SPC n r r= |
+  |----------------------+-------------|

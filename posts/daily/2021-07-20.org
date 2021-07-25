@@ -1,0 +1,6 @@
+#+title: 2021-07-20
+
+* DONE Get rid of the invalid care labels images
+SCHEDULED: <2021-07-20 Tue 09:30-12:00>
+* DONE Filter out the care label images which new symbol system initilized from 2016
+SCHEDULED: <2021-07-20 Tue 13:30-16:00>

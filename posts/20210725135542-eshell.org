@@ -1,0 +1,27 @@
+#+title: Eshell
+#+roam_key: https://www.youtube.com/watch?v=RhYNu6i_uY4
+#+roam_key: http://howardism.org/Technical/Emacs/eshell-present.html
+
+* EShell as a Shell
+
+- Lisp expressions work within parenthesis
+
+- Unlike shell, Eshell
+  - Commands can be executables or Emacs functions
+  - Distinguishes strings, numbers, and lists
+
+- EShell is marraige of /two syntax parsers/:
+
+  - Shell expressions
+
+    #+BEGIN_SRC bash
+    sh
+    #+END_SRC
+
+  - Lisp expressions
+
+    #+BEGIN_SRC lisp
+    (length "hi")
+    #+END_SRC
+
+- A single line can mix the two!
